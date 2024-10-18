@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:orientation="vertical"
+    android:paddingEnd="100dp"
+    android:weightSum="2"
+    tools:ignore="RtlSymmetry">
+
+    <TextView
+        android:id="@+id/messRecevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/item_receive"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeRecevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#99000000"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/messRecevice"
+        app:layout_constraintTop_toBottomOf="@+id/messRecevice" />
+</LinearLayout>

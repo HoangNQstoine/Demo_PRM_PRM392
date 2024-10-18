@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/cardProductView"
+    android:layout_margin="6dp"
+    android:background="@drawable/border_orange"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_orange">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/pic"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImage1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/phokho" />
+
+        <TextView
+            android:id="@+id/titleMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:text="TextView"
+            android:textColor="#CC000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pic" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0.0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/addtocartBtn"
+            app:layout_constraintStart_toStartOf="@+id/titleMethod"
+            app:layout_constraintTop_toBottomOf="@+id/titleMethod" />
+
+        <ImageView
+            android:id="@+id/addtocartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border_orange"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/price"
+            app:srcCompat="@drawable/add_cart" />
+
+        <ImageView
+            android:id="@+id/favouriteBtnAdd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/border_button"
+            android:padding="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/pic"
+            app:layout_constraintTop_toTopOf="@+id/pic"
+            app:srcCompat="@drawable/btn3" />
+
+        <LinearLayout
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_orange"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/titleMethod"
+            app:layout_constraintStart_toStartOf="@+id/pic">
+
+            <ImageView
+                android:id="@+id/imgStar"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/numberRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="1.0"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

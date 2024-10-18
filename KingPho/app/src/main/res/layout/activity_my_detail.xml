@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <ImageView
+        android:id="@+id/imgGoBack"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_orange"
+        android:backgroundTint="#E6F19D2C"
+        android:src="@drawable/arrow_left"
+        android:scaleType="centerCrop"
+        app:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_left" />
+
+    <TextView
+        android:id="@+id/editProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Profile"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGoBack"
+        app:layout_constraintEnd_toStartOf="@+id/save"
+        app:layout_constraintStart_toEndOf="@+id/imgGoBack"
+        app:layout_constraintTop_toTopOf="@+id/imgGoBack" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgGoBack"
+        app:shapeAppearanceOverlay="@style/roundedImage">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar"
+            android:layout_width="183dp"
+            android:layout_height="186dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar"
+            app:circularflow_radiusInDP="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImage"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_button"
+            android:backgroundTint="#EB8D21"
+            android:padding="7dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/avatar"
+            app:srcCompat="@drawable/camera"
+            app:tint="#fff" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="#EB8D21"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGoBack"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/imgGoBack" />
+
+    <ListView
+        android:id="@+id/lvInfoUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

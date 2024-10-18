@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <ImageView
+        android:id="@+id/imgGoBack"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_orange"
+        android:backgroundTint="#E6F19D2C"
+        android:src="@drawable/arrow_left"
+        android:scaleType="centerCrop"
+        app:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_left" />
+
+    <TextView
+        android:id="@+id/tvOrderDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Order Details"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGoBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgGoBack" />
+
+    <TextView
+        android:id="@+id/orderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Order ID"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgGoBack" />
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Total Amount: "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/orderId" />
+
+    <GridView
+        android:id="@+id/gvOrderedItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:isScrollContainer="false"
+        android:numColumns="1"
+        android:scrollbars="none"
+        android:verticalSpacing="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/rbRating"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:progressTint="#EB8D21"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/etProductReview"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/etProductReview" />
+
+    <EditText
+        android:id="@+id/etProductReview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/edittext_background"
+        android:gravity="top"
+        android:hint="Enter your review"
+        android:inputType="textMultiLine"
+        android:minHeight="100dp"
+        android:padding="10dp"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmitReview"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/btnSubmitReview"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#EB8D21"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" #123456"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/orderId"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/orderId" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$150.00"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/totalAmount"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/totalAmount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

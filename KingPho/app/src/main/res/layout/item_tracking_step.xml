@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    >
+
+    <!-- Vertical Line -->
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:layout_marginStart="24dp"
+
+        />
+
+    <!-- Status Dot -->
+    <View
+        android:id="@+id/status_dot"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dot_background"
+        android:layout_alignStart="@+id/vertical_line"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="-5dp"/>
+
+    <!-- Step Icon -->
+    <ImageView
+        android:id="@+id/step_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@id/status_dot"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_centerVertical="true"
+       android:layout_marginVertical="16dp"
+
+        />
+
+    <!-- Step Title -->
+    <TextView
+        android:id="@+id/step_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/step_icon"
+        android:layout_marginStart="8dp"
+        android:text="Order Placed"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_alignTop="@id/step_icon"
+        android:textColor="@color/gray"
+        />
+
+    <!-- Step Subtitle -->
+    <TextView
+        android:id="@+id/step_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step_title"
+        android:layout_toEndOf="@id/step_icon"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="We have received your order."
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+
+        />
+</RelativeLayout>

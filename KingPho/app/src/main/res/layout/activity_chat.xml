@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgGoBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgAvatarHelper"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            app:shapeAppearanceOverlay="@style/roundedImage"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nameHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            app:srcCompat="@drawable/camera"/>
+
+        <ImageView
+            android:id="@+id/album_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/photo_library"/>
+
+        <EditText
+            android:id="@+id/contentMessage"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:hint="Message"
+            android:textColorHint="#80000000"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/border_button"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgSend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/send" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

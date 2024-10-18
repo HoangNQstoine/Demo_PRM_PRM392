@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/scrollViewCart"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="24dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="24dp"/>
+
+        <TextView
+            android:id="@+id/textViewCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="My Cart"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCart" />
+
+        <LinearLayout
+            android:id="@+id/itemTotalLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart">
+
+            <TextView
+                android:id="@+id/itemTotalTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Items Total:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/itemTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0đ"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deliveryLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/itemTotalLayout">
+
+            <TextView
+                android:id="@+id/deliveryTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delivery Service:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/deliveryTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0đ"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryLayout">
+
+            <TextView
+                android:id="@+id/totalTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0đ"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/checkoutBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/color_orange"
+            android:text="Check out"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/totalLayout" />
+
+        <ImageView
+            android:id="@+id/imageViewEmptyCart"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:visibility="gone"
+            android:foregroundGravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCart"
+            app:srcCompat="@drawable/empty_cart"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

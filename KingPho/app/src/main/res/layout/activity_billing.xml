@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <ImageView
+        android:id="@+id/imgGoBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_orange"
+        android:backgroundTint="#E6F19D2C"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_left"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billing Details"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGoBack"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/imgGoBack" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Delivery details"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#EB8D21"
+        app:layout_constraintStart_toStartOf="@+id/imgGoBack"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant location"
+            android:textSize="13dp"
+            android:textColor="#A6000000"/>
+
+        <TextView
+            android:id="@+id/tvNameShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="King Pho"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/restaurant" />
+
+    <View
+        android:id="@+id/view"
+        style="android.widget.inline.InlineContentView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#0D000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <View
+        android:id="@+id/view2"
+        style="android.widget.inline.InlineContentView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="#0D000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgGoBack" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:srcCompat="@drawable/target" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery location"
+            android:textColor="#A6000000"/>
+
+        <TextView
+            android:id="@+id/tvAddressUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="King Pho"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Purchase Item(s)"
+        android:textColor="#EB8D21"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvPurchase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:nestedScrollingEnabled="false"
+        android:divider="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <View
+        android:id="@+id/view3"
+        style="android.widget.inline.InlineContentView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#0D000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvPurchase" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Payment Details"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#EB8D21"
+        app:layout_constraintStart_toStartOf="@+id/lvPurchase"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Price"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/priceBilling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Delivery Fee"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/deliveryFee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:gravity="end"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="@+id/priceBilling"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Total"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/totalBilling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/methodPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Paid with cash"
+        android:textSize="18sp"
+        android:textColor="#373636"
+        app:layout_constraintEnd_toEndOf="@+id/totalBilling"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

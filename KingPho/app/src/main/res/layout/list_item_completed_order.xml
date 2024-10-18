@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:paddingVertical="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewOrder"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_launcher_background"
+        app:circularflow_radiusInDP="20dp"
+        app:shapeAppearanceOverlay="@style/roundedImage1"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Title"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="15sp"
+            android:textColor="#F44336"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border_status_green"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:text="Completed"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <Button
+        style="@style/Widget.MaterialComponents.Button"
+        android:id="@+id/buttonReorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:backgroundTint="#FFE9CC"
+        android:paddingHorizontal="16dp"
+        android:text="Review"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:tint="#FFE9C9"/>
+</LinearLayout>

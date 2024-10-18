@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KingPho</string>
+    <string name="google_map_api_key">AIzaSyAokfN6yzX1WEAMISWqjeW-lXnGDDhSRXg</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Back</string>
+    <string name="btn_going_on">Going On</string>
+    <string name="btn_completed">Completed</string>
+    <string name="filter">Filter</string>
+    <string name="channel_name">King Pho channel</string>
+    <string name="channel_description">This is King Pho channel</string>
+    <string-array name="filter_options">
+        <item>Tên A-Z</item>
+        <item>Giá tiền</item>
+    </string-array>
+</resources>

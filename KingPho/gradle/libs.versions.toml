@@ -1,0 +1,45 @@
+[versions]
+agp = "8.6.0"
+androidMapsUtils = "0.5"
+circleindicator = "2.1.6"
+converterGson = "2.11.0"
+glide = "4.16.0"
+gson = "2.11.0"
+javaJwt = "3.18.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+loggingInterceptor = "4.12.0"
+material = "1.12.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.0.0"
+uiTextAndroid = "1.6.8"
+
+[libraries]
+android-maps-utils = { module = "com.google.maps.android:android-maps-utils", version.ref = "androidMapsUtils" }
+circleindicator = { module = "me.relex:circleindicator", version.ref = "circleindicator" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+java-jwt = { module = "com.auth0:java-jwt", version.ref = "javaJwt" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+okhttp3-integration = { module = "com.github.bumptech.glide:okhttp3-integration", version.ref = "glide" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
+ui-text-android = { group = "androidx.compose.ui", name = "ui-text-android", version.ref = "uiTextAndroid" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+

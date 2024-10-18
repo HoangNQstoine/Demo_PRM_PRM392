@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:layout_marginVertical="7dp"
+    android:background="@drawable/card_background">
+
+    <!-- Add a checkbox for selection -->
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pic"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkbox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImage1"
+        app:srcCompat="@drawable/phokho" />
+
+    <TextView
+        android:id="@+id/titleMethod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pic"
+        app:layout_constraintTop_toTopOf="@+id/pic" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="đ"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/price"
+        app:layout_constraintTop_toTopOf="@+id/price" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="7dp"
+        android:text="11111111111111"
+        android:maxWidth="180dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        app:layout_constraintEnd_toEndOf="@+id/titleMethod"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/titleMethod"
+        app:layout_constraintTop_toBottomOf="@+id/titleMethod" />
+
+    <ImageView
+        android:id="@+id/minusBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/border_button"
+        android:backgroundTint="@color/color_orange"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:circularflow_radiusInDP="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewQuantity"
+        app:layout_constraintEnd_toStartOf="@+id/textViewQuantity"
+        app:layout_constraintTop_toTopOf="@+id/textViewQuantity"
+        app:shapeAppearanceOverlay="@style/roundedImage"
+        app:srcCompat="@drawable/minus"
+        app:tint="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/textViewQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/border_orange"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxWidth="70dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/plusBtn"
+        app:layout_constraintEnd_toStartOf="@+id/plusBtn"
+        app:layout_constraintTop_toTopOf="@+id/plusBtn" />
+
+    <ImageView
+        android:id="@+id/plusBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/border_button"
+        android:backgroundTint="@color/color_orange"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:circularflow_radiusInDP="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        app:shapeAppearanceOverlay="@style/roundedImage"
+        app:srcCompat="@drawable/plus"
+        app:tint="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

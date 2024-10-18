@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFB000</color>
+    <color name="blue">#5CB3F8</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="gray">#808080</color>
+    <color name="green">#4CAF50</color>
+    <color name="completed_color">#FAC95C</color> <!-- Orange -->
+    <color name="ongoing_color">#FFB000</color> <!-- Orange -->
+    <color name="pending_color">#808080</color> <!-- Gray -->
+    <color name="your_search_icon_color">#FF0000</color>
+    <color name="color_red">#ff0000</color>
+    <color name="color_yellow">#ffcc00</color>
+    <color name="color_orange">#FFB000</color>
+    <color name="color_default">#E9E9E9</color>
+    <color name="color_gray">#f6f6f6</color>
+    <color name="color_button_choose00">#80FD6637</color>
+
+
+</resources>
